@@ -262,11 +262,15 @@ public class Register_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_lbl_minimizeMouseClicked
 
     private void btn_registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registerActionPerformed
-        // TODO add your handling code here:
+        new Dashboard().setVisible(true);
+
+        this.dispose();//to close the current jframe
     }//GEN-LAST:event_btn_registerActionPerformed
 
     private void btn_register1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_register1ActionPerformed
-        // TODO add your handling code here:
+        new Login_Form().setVisible(true);
+
+        this.dispose();//to close the current jframe
     }//GEN-LAST:event_btn_register1ActionPerformed
 
     /**

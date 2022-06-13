@@ -100,6 +100,7 @@ public class Login_Form extends javax.swing.JFrame {
             }
         });
 
+        lbl_minimize.setForeground(new java.awt.Color(51, 51, 51));
         lbl_minimize.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lbl_minimize.setText("__");
         lbl_minimize.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -209,7 +210,9 @@ public class Login_Form extends javax.swing.JFrame {
     }//GEN-LAST:event_lbl_minimizeMouseClicked
 
     private void btn_registerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_registerActionPerformed
-        // TODO add your handling code here:
+        new Register_Form().setVisible(true);
+
+        this.dispose();//to close the current jframe
     }//GEN-LAST:event_btn_registerActionPerformed
 
     /**

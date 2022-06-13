@@ -37,7 +37,6 @@ public class Dashboard extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel3 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel4 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -59,7 +58,7 @@ public class Dashboard extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jpanel_login_form.setBackground(new java.awt.Color(102, 102, 102));
+        jpanel_login_form.setBackground(new java.awt.Color(255, 255, 255));
         jpanel_login_form.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         SidePanel.setBackground(new java.awt.Color(102, 102, 102));
@@ -88,9 +87,6 @@ public class Dashboard extends javax.swing.JFrame {
         jSeparator2.setBackground(new java.awt.Color(255, 255, 255));
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
         SidePanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 120, -1));
-
-        jLabel4.setText("6:12");
-        SidePanel.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 440, -1, -1));
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -133,6 +129,11 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/Customer.png"))); // NOI18N
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
 
         jLabel6.setBackground(new java.awt.Color(51, 51, 51));
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -169,6 +170,11 @@ public class Dashboard extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Resources/inventory.png"))); // NOI18N
         jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
 
         jLabel11.setBackground(new java.awt.Color(51, 51, 51));
         jLabel11.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
@@ -200,7 +206,7 @@ public class Dashboard extends javax.swing.JFrame {
 
         SidePanel.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 150, -1));
 
-        jpanel_login_form.add(SidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 540));
+        jpanel_login_form.add(SidePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 150, 600));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -242,14 +248,14 @@ public class Dashboard extends javax.swing.JFrame {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(46, 46, 46)
                 .addComponent(jLabel7)
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(138, 138, 138)
                 .addComponent(jLabel7)
-                .addContainerGap(294, Short.MAX_VALUE))
+                .addContainerGap(374, Short.MAX_VALUE))
         );
 
         jButton1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -293,9 +299,9 @@ public class Dashboard extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jpanel_login_form.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 850, 520));
+        jpanel_login_form.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 990, 600));
 
-        getContentPane().add(jpanel_login_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 600));
+        getContentPane().add(jpanel_login_form, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1140, 600));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -307,6 +313,18 @@ public class Dashboard extends javax.swing.JFrame {
     private void lbl_exitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbl_exitMouseClicked
         System.exit(0);
     }//GEN-LAST:event_lbl_exitMouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+        new Customer().setVisible(true);
+
+        this.dispose();//to close the current jframe
+    }//GEN-LAST:event_jLabel9MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        new Inventory().setVisible(true);
+
+        this.dispose();//to close the current jframe
+    }//GEN-LAST:event_jLabel10MouseClicked
 
     /**
      * @param args the command line arguments
@@ -351,7 +369,6 @@ public class Dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
